@@ -43,7 +43,7 @@ USER appuser
 COPY . .
 
 # Expose the port that the application listens on.
-EXPOSE 8000
+EXPOSE 8080
 
 # Run the application.
-CMD gunicorn 'app:app' --bind=0.0.0.0:8000
+CMD python3 -m flask run --host=0.0.0.0 --port=8080
